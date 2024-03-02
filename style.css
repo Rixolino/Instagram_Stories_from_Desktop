@@ -1,0 +1,57 @@
+#draggable { width: 200px; height: 200px; padding: 0.5em; background: #fafafa; border: 1px solid #ccc; border-radius: 4px; cursor: move; position: absolute; }
+#draggableImg { width: 100%; height: 100%; object-fit: cover; }
+.story {
+    width: 300px;
+    height: 500px;
+    border-radius: 15px;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+.story::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+}
+.text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 24px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.controls {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+.controls .color-controls, .controls .image-controls {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-right: 30px;
+}
+
+.connect-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.controls .move-controls {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}

@@ -1,1 +1,36 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+    <title>La mia storia Instagram</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/interactjs@1.10.11/dist/interact.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <button class="connect-button" onclick="connectInstagram()">Connetti a Instagram</button>
+        <div class="controls">
+            <div class="color-controls">
+                <input type="color" id="bgColor" value="#ffffff">
+                <button onclick="changeColor()">Cambia colore di sfondo</button>
+            </div>
+            <div class="image-controls">
+                <input type="text" id="imgUrl" placeholder="Inserisci il link dell'immagine">
+                <button onclick="changeImage()">Cambia immagine</button>
+            </div>
+        </div>
+        <div class="story" style="background-color: #ffffff;">
+            <div id="draggable" class="ui-widget-content">
+                <img id="draggableImg" src="" alt="">
+            </div>
+            <div class="text">Il tuo testo qui</div>
+        </div>
+        <div class="controls move-controls">
+            <button onclick="move('up')">Su</button>
+            <button onclick="move('down')">Giù</button>
+            <button onclick="move('left')">Sinistra</button>
+            <button onclick="move('right')">Destra</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
